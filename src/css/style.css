@@ -1,0 +1,72 @@
+body {
+  font-size: 18px;
+}
+
+#playfield {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 2.4rem);
+  grid-template-rows: repeat(10, 2.4rem);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.field:hover {
+  background-color: cornflowerblue;
+}
+
+.field.bomb,
+.field.bomb:hover {
+  background-color: brown;
+  cursor: auto;
+}
+
+.save,
+.save:hover {
+  background-color: #000;
+  cursor: auto;
+}
+
+.field.secure {
+  background-color: blueviolet;
+}
+
+.field.secure:hover {
+  background-color: darkorchid;
+}
+
+.modal {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.modal p {
+  font-size: 2rem;
+}
+
+button {
+  background-color: #003366;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
